@@ -20,6 +20,7 @@ const ImageGallery = () => {
     setActiveImageIndex(null);
   };
 
+
   const nextImage = () => {
     setActiveImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -31,7 +32,7 @@ const ImageGallery = () => {
   };
 
   return (
-    <div className="image-gallery px-44 py-16">
+    <div className="image-gallery bg-gray-100 px-44 py-16">
       <div className="text-center my-4">
         <div>
           <h2
@@ -51,7 +52,7 @@ const ImageGallery = () => {
             key={index}
             src={image}
             alt={`Imagen ${index + 1}`}
-            className="cursor-pointer w-full h-[400px] object-cover rounded-lg shadow-md"
+            className="cursor-pointer w-full h-[300px] object-cover rounded-lg shadow-md"
             onClick={() => openGallery(index)}
           />
         ))}

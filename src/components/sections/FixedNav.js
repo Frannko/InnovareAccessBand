@@ -24,7 +24,7 @@ const FixedNav = ({ darkMode }) => {
 
   return (
     <nav
-      className={`hidden sm:hidden md:flex z-20 flex shrink-0 grow-0 justify-around gap-4 border-t border-gray-200 ${
+      className={`sm:hidden md:flex z-20 flex shrink-0 grow-0 justify-around gap-4 border-t border-gray-200 ${
         darkMode ? "bg-slate-800 text-white" : "bg-white text-gray-700"
       } p-2.5 shadow-lg backdrop-blur-lg fixed top-1/4 left-6 flex-col rounded-lg border`}
     >

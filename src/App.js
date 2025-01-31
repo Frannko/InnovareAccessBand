@@ -1,25 +1,21 @@
 // src/App.js
 import React from "react";
-import Header from "./components/Header";
-import FixedNav from "./components/FixedNav";
-import HeroSection from "./components/HeroSection";
-import ImageGallery from "./components/ImageGallery";
-import CarouselEmpresas from "./components/CarouselEmpresas";
-import Destacados from "./components/Destacados";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/layout/Header";
+import Inicio from "./components/pages/Inicio";
+import Caracteristica from "./components/pages/Caracteristicas"; // Importa la nueva página
 
 function App() {
   return (
-    <div className="scroll-smooth">
-      <Header />
-      <FixedNav />
-      <div className="">
-        <HeroSection />
-        <div className="mt-[130px]"></div>
-        <ImageGallery />
-        <Destacados/>
-        <CarouselEmpresas />
+    <Router>
+      <div className="scroll-smooth">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Inicio />} /> {/* Ruta para Inicio */}
+          <Route path="/caracteristicas" element={<Caracteristica />} /> {/* Ruta para Caracteristica */}
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 

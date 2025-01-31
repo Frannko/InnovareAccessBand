@@ -26,7 +26,7 @@ const Destacados = () => {
         {videos.map((video) => (
           <div key={video.id} className="flex flex-col items-center">
             <video
-              className="w-full h-72 md:h-[720px] rounded-lg shadow-md object-cover"
+              className="w-full h-72 md:h-[640px] rounded-lg shadow-md object-cover"
               muted
               preload="auto"
               onMouseEnter={(e) => e.currentTarget.play()}
